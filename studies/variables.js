@@ -1,10 +1,5 @@
-/* 
-*   You should have notes for each of the sub-topics of each file, which you can find listed below.
-*   NOTE:   The notes you make must be working JavaScript. You should have code examples that clearly show you understand the concept. 
-*           Use single-line or multiline comments to explain your code. Ensure your code works and is valid by running the file you are 
-*           writing in notes in!
-*   Make sure these notes are in your own words, and using your own examples, so you can best understand them!
-*/
+
+
 
 /*
 * VARIABLES:
@@ -20,14 +15,14 @@
 * 2. There are 2 phases of using variables: declaration and initialization (or assignment).
 */
 
+hoistedVar = 'On top, ya heard me';
+console.log(hoistedVar);    // prints 'On top, ya heard me' even though it was declared at bottom
+
 // 1. declaration //
 var myName;
+console.log(myName); // prints => undefined, because we have NOT yet initialized it
 
-/*
-* At the declaration phase, the variable myName is undefined because we have NOT initialized
-* it to anything
-*/
-console.log(myName); // prints => undefined
+
 
 // 2. initialization or assignment //
 myName = 'john';
@@ -37,14 +32,23 @@ console.log(myName); // prints => john
 myName = 'bob';
 console.log(myName); // prints => bob
 
-// NOTE: We can assign and re-assign anything to a variable - we cannot do this with constants //
+// NOTE: We can assign and re-assign anything using var 
 var myVariable = 1;
-var myVariable = true;
+myVariable = true;
 myVariable = "someString";
 
 
-/*
-Declaration and assignment
-var, let, const
-Hoisting
-*/
+// 4. Using let and const
+let aName = 'Truman';       // let is like var except it is not hoisted 
+const bName = 'Butler';     // const cannont be hoisted nor reassigned; however, collections can still be manipulated
+console.log(aName);     
+console.log(bName);
+
+
+// 5. var gets hoisted globally, unlike let and const
+var hoistedVar;     // see console.log(hoistedVar) at the top; only the declaration get hoisted
+
+
+
+
+

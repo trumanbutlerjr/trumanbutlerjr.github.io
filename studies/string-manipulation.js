@@ -1,12 +1,24 @@
-/* 
-*   You should have notes for each of the sub-topics of each file, which you can find listed below.
-*   NOTE:   The notes you make must be working JavaScript. You should have code examples that clearly show you understand the concept. 
-*           Use single-line or multiline comments to explain your code. Ensure your code works and is valid by running the file you are 
-*           writing in notes in!
-*   Make sure these notes are in your own words, and using your own examples, so you can best understand them!
-*/
 
-/*
-With operators
-With string methods
-*/
+
+
+// Strings are character data in computer programs.
+// Here are several sample methods of how a programmer would manipulate, or change, strings in Javascript
+
+'t'.toUpperCase();                  // capitalizes a character
+
+'T'.toLowerCase();                  // lower cases a character
+
+'What\'s up dude'.split(' ');       // converts string to array; elements separated by what is designated in parentheses
+
+['Chick', 'Fil', 'A'].join('-');    // converts array to string; strings separated by what is designated in parentheses 
+
+var a = 'I hate you';
+var b = a.replace('hate', 'love');  // can be used to replace characters; original string not affected
+console.log(b);
+
+'      No space '.trim();           // used to get rid of space before first index and last index of string
+
+// We can also manipulate strings with the + operator
+console.log('This is ' + 'me.');    // used to concatenate two values
+var thisIs = 'This is ';
+console.log(thisIs += 'me.');       // used to at once concatenate and assign a value
